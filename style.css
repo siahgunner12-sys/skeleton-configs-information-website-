@@ -1,0 +1,220 @@
+:root {
+    --bg-main: #060709;
+    --card-bg: #0c0e12;
+    --border-color: #171b22;
+    
+    --text-primary: #f8fafc;
+    --text-muted: #64748b;
+    --text-dark: #334155;
+    
+    --accent-blue: #38bdf8;
+    --accent-green: #10b981;
+    --accent-red: #f43f5e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.brand .dot {
+    color: var(--accent-blue);
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+}
+
+/* Header Context */
+.hero-section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px 20px 30px 20px;
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 780px;
+}
+
+/* Content Frame */
+.content-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+.info-section {
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    color: #fff;
+    border-left: 2px solid var(--text-dark);
+    padding-left: 12px;
+}
+
+.body-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+.section-desc {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+/* Core Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.info-card h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px 0;
+}
+
+/* Informational Analysis Table */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+    background-color: rgba(255, 255, 255, 0.01);
+    color: var(--text-primary);
+}
+
+.comparison-table td strong {
+    color: #fff;
+}
+
+.good-text { color: var(--accent-green); }
+.bad-text { color: var(--accent-red); opacity: 0.6; }
+
+/* Bottom Structural Showcase Box */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .showcase-grid { grid-template-columns: 1fr; }
+}
+
+.showcase-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+}
+
+.showcase-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.box-meta {
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+}
+
+.showcase-box p:last-child {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Simple Footer */
+.site-footer {
+    border-top: 1px solid var(--border-color);
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 0.7rem;
+    color: var(--text-dark);
+}
